@@ -8,7 +8,7 @@ const AddTask = event => {
   event.preventDefault();
   const task = document.getElementById("new-task-description");
   const newTask = document.createElement("li");
-  newTask.innerText = newTaskDescription.value;
+  newTask.innerText = task.value;
 
    document.getElementById("tasks").appendChild(task);
 };
