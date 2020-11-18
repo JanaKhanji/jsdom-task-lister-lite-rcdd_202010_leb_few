@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     //form and relevant input fields
-  const newTaskForm = document.getElementById("create-task-form");
-  const newTaskDescription = document.getElementById("new-task-description");
-  const newTaskPriority = document.getElementById("new-task-priority");
+  const form = document.getElementById("create-task-form");
+  const task = document.getElementById("new-task-description");
 
 
   //attach event listeners
@@ -16,10 +15,5 @@ const createNewTask = event => {
   const newTask = document.createElement("li");
   newTask.innerText = newTaskDescription.value;
 
-  appendNewTask(newTask);
-  event.target.reset();
-};
-
-const appendNewTask = task => {
-  document.getElementById("tasks").appendChild(task);
+   document.getElementById("tasks").appendChild(task);
 };
